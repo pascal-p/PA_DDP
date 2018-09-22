@@ -29,7 +29,7 @@ shinyUI(fluidPage(theme = shinytheme("slate"),
       ),
 
       sliderInput(inputId="trainSetPerc", label="Percentage for Training set?",
-                  min=0.5, max=1.0, value=0.7, step=0.1),
+                  min=0.5, max=0.95, value=0.7, step=0.1),
 
       checkboxGroupInput(
         inputId="algorithms", label="List of Algorithms [none]",
