@@ -61,13 +61,20 @@ type: section
 About tradeoffs
 ========================================================
 type: section
-
 The tradeoffs are between fluidity/responsiveness and long computation
-
 <small>
 - As the size of dataset increases and depending on selected parameters and algorithm, a result can take a while to be  computed.
 - So, in order to keep the fluidity, I relied on caching by pre-computing a subset of the possible results (using a fixed seed).
 - However, not all the subsets were pre-computed, so you can see for yourself (for example with a 60% split, ...).
+
+Example of pre-computed/cached result:
+
+|algorithm | acc_train| kappa_train|  acc_test| kappa_test|      oose| utime|
+|:---------|---------:|-----------:|---------:|----------:|---------:|-----:|
+|C5.0      | 0.9265884|   0.8369122| 0.9038462|  0.7823357| 0.0961538| 2.899|
+|GBM       | 0.9348367|   0.8566328| 0.8942308|  0.7620632| 0.1057692| 1.528|
+|BCART     | 0.8901735|   0.7640245| 0.9038462|  0.7823357| 0.0961538| 1.959|
+|RF        | 0.9432551|   0.8741583| 0.8557692|  0.6834416| 0.1442308| 3.078|
 </small>
 
 

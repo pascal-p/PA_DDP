@@ -61,13 +61,17 @@ type: section
 About tradeoffs
 ========================================================
 type: section
-
 The tradeoffs are between fluidity/responsiveness and long computation
-
 <small>
 - As the size of dataset increases and depending on selected parameters and algorithm, a result can take a while to be  computed.
 - So, in order to keep the fluidity, I relied on caching by pre-computing a subset of the possible results (using a fixed seed).
 - However, not all the subsets were pre-computed, so you can see for yourself (for example with a 60% split, ...).
+
+Example of pre-computed/cached result:
+```{r load_from_cache, echo=F}
+ load("../cache/sum_df_ionosphere.data_Accuracy_70p_cv.RData")
+ knitr::kable(sum_df, caption='Summary')
+```
 </small>
 
 

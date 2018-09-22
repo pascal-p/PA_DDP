@@ -873,6 +873,20 @@ AToShiDe
 </small></li>
 </ul>
 
+<p>Example of pre-computed/cached result:</p>
+
+<pre><code class="r"> load(&quot;../cache/sum_df_ionosphere.data_Accuracy_70p_cv.RData&quot;)
+
+ sum_df
+</code></pre>
+
+<pre><code>  algorithm acc_train kappa_train  acc_test kappa_test       oose utime
+1      C5.0 0.9265884   0.8369122 0.9038462  0.7823357 0.09615385 2.899
+2       GBM 0.9348367   0.8566328 0.8942308  0.7620632 0.10576923 1.528
+3     BCART 0.8901735   0.7640245 0.9038462  0.7823357 0.09615385 1.959
+4        RF 0.9432551   0.8741583 0.8557692  0.6834416 0.14423077 3.078
+</code></pre>
+
 </div>
 
 </section>
