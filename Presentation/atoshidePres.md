@@ -13,7 +13,14 @@ height: 1024
 
 Another Toy Shiny Demonstration [あとしで]
 
-<small>Coursera JHU, Developing Data Product</small>
+<small>
+
+- Code available: https://github.com/pascal-p/PA_DDP
+- This Presentation: https://rpubs.com/Pascal/pa_ddp
+- Demo App available: https://lacsap-ml.shinyapps.io/atoshide/
+
+Context: Coursera JHU, Developing Data Product
+</small>
 
 
 Purpose

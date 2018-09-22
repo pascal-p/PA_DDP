@@ -83,7 +83,7 @@ shinyServer(function(input, output) {
       if (dataset == "ionosphere" && percTrainSet %in% c(.7, .8, .9)) {
         print("==> DEBUG: CACHE: ionosphere")
         url <- 'https://archive.ics.uci.edu/ml/machine-learning-databases/ionosphere/'
-        r <- loadFromCache(paste0("../../cache/sum_df_", dataset, ".data_", metric, "_",
+        r <- loadFromCache(paste0(dir, "/sum_df_", dataset, ".data_", metric, "_",
                                   percTrainSet * 100, "p_", cvType, ".RData"),
                            url, dataset, c(2), "V35", c_objective, percTrainSet)
         sum_df <- r[[1]]
@@ -97,7 +97,7 @@ shinyServer(function(input, output) {
       else if (dataset == "phishing" && percTrainSet %in% c(.7, .8, .9)) {
         print("==> DEBUG: CACHE: phishing")
         url <- 'https://archive.ics.uci.edu/ml/machine-learning-databases/00379/'
-        r <- loadFromCache(paste0("../../cache/sum_df_PhishingData.arff_", metric, "_",
+        r <- loadFromCache(paste0(dir, "/sum_df_PhishingData.arff_", metric, "_",
                                   percTrainSet * 100, "p_", cvType, ".RData"),
                            url, "PhishingData", c(), "Result", c_objective, percTrainSet, suffx='.arff')
         sum_df   <- r[[1]]
