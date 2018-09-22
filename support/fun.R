@@ -1,6 +1,9 @@
 
 library(caret)
 library(C50)
+library(e1071)
+library(gbm)
+library(randomForest)
 library(RWeka)
 
 setSeed <- function(s=20180915) {
